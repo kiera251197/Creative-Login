@@ -1,31 +1,49 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/user");
+const bcrypt = require("bcryptjs");
 
-//Add New User
+// Register
 router.post("/register", async (req, res) => {
   try {
-    const newUser = new User(req.body);
-    const saved = await newUser.save();
-    res.send("User registered");
-    res.status(201).json(saved);
+    const { name, email, password, creativePassword } = req.body;
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    const hashedCreativePassword = await bcrypt.hash(creativePassword, salt);
+
+    const registeredUser = new User({ 
+      name,
+      email,
+      password: hashedPassword,
+      creativePassword: hashedCreativePassword,
+    });
+
+    const saved = await registeredUser.save();
+    return res.status(201).json({ message: "User registered successfully", data: saved });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    return res.status(400).json({ message: error.message });
   }
 });
 
-//Login
+// Login
 router.post("/login", async (req, res) => {
   try {
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) return res.send("User not found");
-    if (user.password !== req.body.password)
-      return res.send("Email, Password or Colour Sequence is incorrect");
-    if (user.creativePassword !== req.body.creativePassword)
-        return res.send("Email, Password or Colour Sequence is incorrect");
-    res.send("Login successful");
+    const { email, password, creativePassword } = req.body;
+
+    const loggedInUser = await User.findOne({ email });
+    if (!loggedInUser) return res.status(404).json({ message: "User not found" });
+
+    const isPasswordMatch = await bcrypt.compare(password, loggedInUser.password);
+    const isCreativeMatch = await bcrypt.compare(creativePassword, loggedInUser.creativePassword);
+
+    if (!isPasswordMatch || !isCreativeMatch) {
+      return res.status(401).json({ message: "Email, Password or Colour Sequence is incorrect" });
+    }
+
+    return res.status(200).json({ message: "Login successful" });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    return res.status(400).json({ message: error.message });
   }
 });
 
