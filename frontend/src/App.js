@@ -50,12 +50,17 @@ function App() {
 
   const Register = async () => {
     try {
-      await axios.post("http://localhost:5009/api/user/register", {
+      const res =await axios.post("http://localhost:5009/api/user/register", {
         name,
         email,
         password,
         creativePassword: selectedColours.join('')
       });
+      
+      const token = res.data.token;
+      localStorage.setItem("token", res.data.token);
+      console.log("JWT Token:", token);
+
       setMessage("Your registration details have been saved");
       setShowModal(true);
     } catch (error) {
@@ -66,11 +71,16 @@ function App() {
 
   const Login = async () => {
     try {
-      await axios.post("http://localhost:5009/api/user/login", {
+      const res = await axios.post("http://localhost:5009/api/user/login", {
         email,
         password,
         creativePassword: selectedColours.join('')
       });
+
+      const token = res.data.token;
+      localStorage.setItem("token", res.data.token);
+      console.log("JWT Token:", token);
+
       setMessage("Welcome back!");
       setShowModal(true);
     } catch (error) {
