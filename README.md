@@ -104,7 +104,19 @@ ___
 Demo Video: [Google Drive Link](https://drive.google.com/file/d/136giKXQF_lpRwwaefeg5wgBg3Ob_i5Sv/view?usp=sharing)
 
 ### Mockups \
-Mockups to be added shortly...
+
+***Desktop Sign Up***
+<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/feb236a878ab9625f202574966c84a1d5c5d2815/frontend/src/mockups/Sign%20Up%20Desktop%20Mockup.png" width="600" /></p>
+
+***Desktop Login***
+<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/feb236a878ab9625f202574966c84a1d5c5d2815/frontend/src/mockups/Login%20Desktop%20Mockup.png" width="600" /></p>
+
+***Tablet***
+<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/feb236a878ab9625f202574966c84a1d5c5d2815/frontend/src/mockups/Sign%20Up%20Tablet%20Mockup.png" width="600" /></p>
+
+***Mobile***
+<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/feb236a878ab9625f202574966c84a1d5c5d2815/frontend/src/mockups/Cards%20Mobile%20Mockup.png" width="600" /></p>
+
 
 ---
 
