@@ -1,6 +1,4 @@
-## <p align="center" style="text-decoration: none !important;padding:0;margin:0;"> <br>DV 200 Term 2</p>
-
-## <p align="center" style="text-decoration: none !important;padding:0;margin:0;">Colour Sequence Creative Authentication System</p>
+# <p align="center" style="text-decoration: none !important;padding:0;margin:0;">Colour Sequence Creative Authentication System</p>
 
 ## Table of Contents
 
@@ -13,6 +11,7 @@
 * [Features and Functionality](#features-and-functionality)
 * [Final Outcome](#final-outcome)
     * [Video Presentation](#presentation-video)
+    * [Mockups](#mockups)
 * [Conclusion](#conclusion)
 * [Acknowledgements](#acknowledgements)
 
@@ -80,6 +79,8 @@ Start the backend server:
   ```
   The app will open automatically on http://localhost:3000
 
+---
+
 ### Features and Functionality
 
 ***Visual Sign Up Interface:** Users register by entering their basic details (Name, Email) and selecting an ordered 5 colour sequence from a custom designed grid featuring stylised Pantone™ colour blocks (such as Petal, Burgundy, Sepia etc).
@@ -92,13 +93,22 @@ Start the backend server:
 
 ***Modern CSS UI Design:*** The frontend features a sleek card layout, rich color gradients, clean typography and responsive grid layouts.
 
-### Final Outcome
+---
+
+## Final Outcome
 ***Presentation Video***
 Demo Video: Link to be uploaded shortly
+
+***Mockups***
+Mockups to be added shortly...
+
+---
 
 ### Conclusion
 
 This Creative Authentication System demonstrates that web security does not have to be visually dull or mathematically rigid to be structurally sound. By building on top of the MERN framework, the application safely stores user identities with modern hashing procedures while providing a beautiful, friction free frontend experience. The process of building this app pushed standard authentication models out of their comfort zone, showcasing how design oriented development can breathe life into technical backend structures.
+
+---
 
 ## Acknowledgements
 MongoDB Atlas for secure cloud database hosting.
