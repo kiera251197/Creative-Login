@@ -33,6 +33,7 @@ function App() {
   const [selectedColours, setSelectedColours] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
+  // Validation
   const isEmailInvalid = email.length > 0 && !email.includes("@") && !email.includes(".");
   const isPasswordInvalid = password.length > 0 && password.length < 6;
   const isNameInvalid = name.length > 0 && name.trim().length < 2;
@@ -44,6 +45,7 @@ function App() {
     PantoneCardMocha, PantoneCardSepia, PantoneCardDenim
   ];
 
+  // Shuffle Cards
   const [shuffledCards, setShuffledCards] = useState(() => {
     return [...allCards].sort(() => Math.random() - 0.5);
   });
@@ -57,6 +59,7 @@ function App() {
         creativePassword: selectedColours.join('')
       });
       
+      // Stores JWT token in local storage
       const token = res.data.token;
       localStorage.setItem("token", res.data.token);
       console.log("JWT Token:", token);
@@ -89,7 +92,7 @@ function App() {
     }
   };
 
-  // Creative Login selection
+  // Creative Login colour selection
   const handleColourSelect = (hex) => {
     if (selectedColours.length < 5) {
       const newSequence = [...selectedColours, hex];
@@ -103,7 +106,7 @@ function App() {
     setSelectedColours((prev) => prev.slice(0, -1));
   };
 
-  //Modal
+  // Modal
   const handleModalClose = () => {
     setShowModal(false);
     if (currentPage === "signup" && message.includes("saved")) {

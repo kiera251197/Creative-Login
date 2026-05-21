@@ -14,6 +14,7 @@ router.post("/register", async (req, res) => {
     if (existingUser)
       return res.status(400).json({ message: "An account with this email already exists" });
 
+    //Bycrpt
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -26,6 +27,7 @@ router.post("/register", async (req, res) => {
 
     const saved = await registeredUser.save();
 
+    //JWT Token
     const token = jwt.sign(
       { id: saved._id, email: saved.email },
       process.env.JWT_SECRET,
@@ -43,9 +45,11 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password, creativePassword } = req.body;
 
+    // Checks if user exists
     const loggedInUser = await User.findOne({ email });
     if (!loggedInUser) return res.status(404).json({ message: "User not found" });
 
+    //Checks password and colour sequence
     const isPasswordMatch = await bcrypt.compare(password, loggedInUser.password);
     const isCreativeMatch = loggedInUser.creativePassword === creativePassword;
 
@@ -53,6 +57,7 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Email, Password or Colour Palette Sequence is incorrect" });
     }
 
+    //JWT Token
     const token = jwt.sign(
       { id: loggedInUser._id, email: loggedInUser.email },
       process.env.JWT_SECRET,
