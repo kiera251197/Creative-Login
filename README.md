@@ -48,6 +48,8 @@ To run this project locally, ensure you have the following installed:
    git clone <your-github-repo-url>
    cd <your-project-folder>
 
+___
+
 2. **Backend Setup:**
 Navigate to the backend folder and install dependencies:
   ```bash
@@ -61,19 +63,21 @@ Create a .env file in the backend root directory:
   JWT_SECRET=your_super_secret_jwt_key
   ```
 
-Start the backend server:
+3. _Start_ the backend server:
   ```bash
   npm run dev
   ```
 
-3. **Frontend Setup:**
+___
+
+4. **Frontend Setup:**
   Open a new terminal window, navigate to the frontend folder and install the client side dependencies:
   ```bash
   cd frontend
   npm i 
   ```
 
-4. Start the React development server:
+5. _Start_ the React development server:
   ```bash
   npm start
   ```
@@ -96,10 +100,10 @@ Start the backend server:
 ---
 
 ## Final Outcome
-***Presentation Video***
-Demo Video: Link to be uploaded shortly
+### App Walkthrough \
+Demo Video: [Google Drive Link](https://drive.google.com/file/d/136giKXQF_lpRwwaefeg5wgBg3Ob_i5Sv/view?usp=sharing)
 
-***Mockups***
+### Mockups \
 Mockups to be added shortly...
 
 ---
