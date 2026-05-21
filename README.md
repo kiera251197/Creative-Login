@@ -29,7 +29,7 @@ This project is built using JavaScript and spanning across the entire MERN ecosy
 * **Frontend:** React.js, React Router, Axios (API requests)
 * **Backend:** Node.js, Express.js
 * **Database:** MongoDB (via Mongoose ORM)
-* **Security & Auth:** JSON Web Tokens (JWT), Bcrypt.js (Password/Sequence hashing)
+* **Security & Auth:** JSON Web Tokens (JWT), Bcrypt.js (Password hashing and salting)
 
 ---
 
@@ -39,7 +39,7 @@ This project is built using JavaScript and spanning across the entire MERN ecosy
 To run this project locally, ensure you have the following installed:
 * [Git](https://git-scm.com/downloads)
 * [Node.js](https://nodejs.org/en) (which includes **NPM**)
-* A MongoDB Atlas account or local MongoDB Community Server instance running.
+* A MongoDB Atlas account
 
 ### How to Install
 
@@ -87,7 +87,7 @@ ___
 
 ### Features and Functionality
 
-***Visual Sign Up Interface:** Users register by entering their basic details (Name, Email) and selecting an ordered 5 colour sequence from a custom designed grid featuring stylised Pantone™ colour blocks (such as Petal, Burgundy, Sepia etc).
+***Visual Sign Up Interface:*** Users register by entering their basic details (Name, Email) and selecting an ordered 5 colour sequence from a custom designed grid featuring stylised Pantone™ colour blocks (such as Petal, Burgundy, Sepia etc).
 
 ***Dynamic Feedback Slots:*** A dedicated preview container displays empty slots that fill up interactively as the user clicks their colour combination, providing clear real time user feedback.
 
@@ -121,7 +121,7 @@ Demo Video: [Google Drive Link](https://drive.google.com/file/d/136giKXQF_lpRwwa
 
 ### Conclusion
 
-This Creative Authentication System demonstrates that web security does not have to be visually dull or mathematically rigid to be structurally sound. By building on top of the MERN framework, the application safely stores user identities with modern hashing procedures while providing a beautiful, friction free frontend experience. The process of building this app pushed standard authentication models out of their comfort zone, showcasing how design oriented development can breathe life into technical backend structures.
+This Creative Authentication System demonstrates that web security does not have to be visually dull or mathematically rigid to be structurally sound. By building on top of the MERN framework, the application safely stores user identities with hashing & salting procedures while providing a beautiful, friction free frontend experience. The process of building this app pushed the limits of standard authentication models.
 
 ---
 
