@@ -26,7 +26,7 @@ This project is a creative authentication web application built using the MERN s
 Instead of typing a traditional password, users interact with a beautifully curated grid of Pantone™ colour cards. During registration, users select a personalised 5 colour sequence that acts as their secure key. Upon logging in, the user must remember and click their unique 5 colour sequence from the palette grid to gain entry. This brings a visual, highly intuitive and gamified memory twist to security, making it ideal for visual thinkers while preserving strong core authentication principles.
 
 ### ERD
-<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/b186d5fd076f24556f5a5fd7f317969f57871c76/ER%20Diagram%20(Pantone%20%26%20PawMetrics).drawio.png" width="800" /></p>
+<p align="center"><img src="https://github.com/kiera251197/Creative-Login/blob/b186d5fd076f24556f5a5fd7f317969f57871c76/ER%20Diagram%20(Pantone%20%26%20PawMetrics).drawio.png" width="200" /></p>
 
 ### Built With
 This project is built using JavaScript and spanning across the entire MERN ecosystem:
